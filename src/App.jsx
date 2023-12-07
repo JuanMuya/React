@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Navbar />
       <Button />
-      <ItemListContainer greeting={"Bienvenidos"} />
+      <ItemListContainer greeting={"Bienvenidos a la página"} />
 
 
       <ItemCaunt />
