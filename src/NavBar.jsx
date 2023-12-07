@@ -6,27 +6,40 @@ const Navbar = () => {
     return (
         <div>
 
-            <Flex>
-                <Box p='4' bg='red.400'>
-                    MyEcommerce
+            <Flex alignItems="center" bg='yellow.400'>
+                <Box p='4' >
+                    Inicio
                 </Box>
+
                 <Spacer />
 
                 <Menu>
                     <MenuButton >
-                        Categorias
+                        Clothes
                     </MenuButton>
                     <MenuList>
-                        <MenuItem>Categoria 1</MenuItem>
-                        <MenuItem>Categoria 2</MenuItem>
-                        <MenuItem>Categoria 3</MenuItem>
+                        <MenuItem> Man</MenuItem>
+                        <MenuItem> Woman </MenuItem>
+                        <MenuItem>Kids</MenuItem>
 
                     </MenuList>
                 </Menu>
 
                 <Spacer />
 
-                <Box p='4' bg='green.400'>
+                <Box p='4' >
+                    Fotos
+                </Box>
+
+                <Spacer />
+
+                <Box p='4' >
+                    Contacto
+                </Box>
+
+                <Spacer />
+
+                <Box p='4' bg='green.500'>
                     <CartWidget />
                 </Box>
             </Flex>
