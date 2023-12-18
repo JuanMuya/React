@@ -15,7 +15,7 @@ const Navbar = () => {
 
                 <Menu>
                     <MenuButton >
-                        Clothes
+                        Ropa
                     </MenuButton>
                     <MenuList>
                         <MenuItem> Man</MenuItem>

@@ -1,4 +1,13 @@
-# React + Vite
+# PROYECTO DE LA CLASE DE REACT
+
+### Información del Proyecto
+
+1. En éste proyecto se utilizó React
+1. Se utilizaron librerias, Chakra por ejemplo.
+1. El usuario puede ver los detalles de los productos, modificar la cantidad que va a comprar, y agregar a un carrito. Todo esto a través de una base de datos a la cual se conecta.
+1. Al finalizar, un formulario me solicita los datos, los cuales quedan en la base de datos.
+1. Recibo un ID.
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
