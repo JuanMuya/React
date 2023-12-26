@@ -1,5 +1,7 @@
 # PROYECTO DE LA CLASE DE REACT
 
+### Juan React
+
 ### Información del Proyecto
 
 1. En éste proyecto se utilizó React

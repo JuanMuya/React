@@ -1,14 +1,16 @@
 import React from 'react'
 
-const CartWidget = () => {
-  return (
-    <div>
-        
-        Carrito
-        2
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
-    </div>
-  )
+const CartWidget = () => {
+    return (
+        <div>
+
+
+            <AiOutlineShoppingCart />
+
+        </div>
+    )
 }
 
 export default CartWidget
