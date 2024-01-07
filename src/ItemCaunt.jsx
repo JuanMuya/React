@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { Button } from '@chakra-ui/react'
 
 const ItemCaunt = () => {
 
-    const [Contador, setContador] = useState(0)
-    const [Mensaje, setMensaje] = useState("Finalizar Compra?")
 
-    useEffect(() => {
+    const [contador, setContador] = useState(0)
 
-    }, [Contador])
 
     return (
         <div>
+            <Button colorScheme='teal' size='xs' onClick={() => setContador(contador + 1)}>
+                +
+            </Button>
+            <Button>
+                Agregar al Carrito {contador}
+            </Button>
 
-            <h1>Contador</h1>
-            <h2> {Contador} </h2>
-            <button onClick={() => setContador(Contador + 1)}>+</button>
-            <button onClick={() => setContador(Contador - 1)}>-</button>
-
-            <h3> {Mensaje} </h3>
-            <button onClick={() => setMensaje("Compra Finalizada")}>Comprar</button>
+            <Button colorScheme='teal' size='xs' onClick={() => setContador(contador - 1)}>
+                -
+            </Button>
 
         </div>
     )

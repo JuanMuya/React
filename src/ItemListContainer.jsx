@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemList from './ItemList'
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -26,6 +27,13 @@ const ItemListContainer = ({ greeting }) => {
     .catch((error) => {
       console.log(error)
     })
+
+  return (
+    <div>
+      <ItemList productos={producos} />
+    </div>
+
+  )
 
 
 
