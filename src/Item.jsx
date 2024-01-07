@@ -13,7 +13,7 @@ const Item = ({ titulo, descripcion, precio }) => {
                         {descripcion}
                     </Text>
                     <Text color='blue.600' fontSize='2xl'>
-                        {precio}
+                        ${precio}
                     </Text>
                 </Stack>
             </CardBody>

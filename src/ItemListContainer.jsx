@@ -4,9 +4,9 @@ import ItemList from './ItemList'
 const ItemListContainer = ({ greeting }) => {
 
   const producos = [
-    { titulo: "Camisetas normales", description: "100% Algodón", precio: 890 },
-    { titulo: "Camisetas raras", description: "100% Algodón con estampas", precio: 1340 },
-    { titulo: "Juguetes", description: "Figuras coleccionables", precio: 550 }
+    { id: 1, titulo: "Camisetas normales", description: "100% Algodón", precio: 890 },
+    { id: 2, titulo: "Camisetas raras", description: "100% Algodón con estampas", precio: 1340 },
+    { id: 3, titulo: "Juguetes", description: "Figuras coleccionables", precio: 550 }
   ]
 
   const verProducos = new Promise((resolve, reject) => {
