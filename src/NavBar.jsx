@@ -1,52 +1,65 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
         <div>
 
             <Flex alignItems="center" bg='yellow.400'>
-                <Box p='4' >
-                    Inicio
-                </Box>
-
+                <Link to={"/"}>
+                    <Box p='4' >
+                        Inicio
+                    </Box>
+                </Link >
                 <Spacer />
 
                 <Menu>
+
                     <MenuButton >
                         Ropa
                     </MenuButton>
+
                     <MenuList>
-                        <MenuItem> Man</MenuItem>
-                        <MenuItem> Woman </MenuItem>
-                        <MenuItem>Kids</MenuItem>
+                        <Link to={"/categoria/A"}>
+                            <MenuItem> Man</MenuItem>
+                        </Link>
+                        <Link to={"/categoria/B"}>
+                            <MenuItem> Woman </MenuItem>
+                        </Link>
+                        <Link to={"/categoria/C"}>
+                            <MenuItem>Kids</MenuItem>
+                        </Link>
 
                     </MenuList>
                 </Menu>
 
                 <Spacer />
-
-                <Box p='4' >
-                    Fotos
-                </Box>
-
-                <Spacer />
-
-                <Box p='4' >
-                    Contacto
-                </Box>
+                <Link to={"/about"}>
+                    <Box p='4' >
+                        Fotos
+                    </Box>
+                </Link>
 
                 <Spacer />
+                <Link to={"/contact"}>
+                    <Box p='4' >
+                        Contacto
+                    </Box>
+                </Link>
 
-                <Box p='4' bg='green.500'>
-                    <CartWidget />
-                </Box>
+                <Spacer />
+                <Link to={"/cart"}>
+                    <Box p='4' bg='green.500'>
+                        <CartWidget />
+                    </Box>
+                </Link>
             </Flex>
 
 
 
-            <CartWidget />
+
 
         </div>
     )
