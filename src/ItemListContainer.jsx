@@ -5,39 +5,42 @@ import { useParams } from 'react-router-dom'
 const ItemListContainer = () => {
 
   const { categoriaId } = useParams()
+  console.log(categoriaId)
 
-
-  const producos = [
+  const productos = [
     { id: 1, titulo: "Camisetas normales", description: "100% Algodón", precio: 890, categoria: "A" },
     { id: 2, titulo: "Camisetas raras", description: "100% Algodón con estampas", precio: 1340, categoria: "B" },
     { id: 3, titulo: "Juguetes", description: "Figuras coleccionables", precio: 550, categoria: "C" }
   ]
 
-  const verProducos = new Promise((resolve, reject) => {
+  const verProductos = new Promise((resolve, reject) => {
 
     if (productos.length > 0) {
       setTimeout(() => {
-        resolve(producos)
+        resolve(productos)
       }, 550)
     } else {
       reject("No se obtuvo resultado")
     }
   })
 
-  verProducos
+  verProductos
     .then((resultado) => {
-      console.log(resultado)
+      //  console.log(resultado)
     })
     .catch((error) => {
-      console.log(error)
+      //   console.log(error)
     })
 
+  const productosFiltrados = productos.filter(function (producto) {
+    return producto.categoria == categoriaId
+  })
+  console.log(productosFiltrados)
 
- 
 
   return (
     <div>
-      <ItemList productos={producos} />
+      <ItemList productos={productosFiltrados} />
     </div>
 
   )

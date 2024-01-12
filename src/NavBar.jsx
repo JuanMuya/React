@@ -18,18 +18,18 @@ const Navbar = () => {
                 <Menu>
 
                     <MenuButton >
-                        Ropa
+                        Indumentaria
                     </MenuButton>
 
                     <MenuList>
                         <Link to={"/categoria/A"}>
-                            <MenuItem> Man</MenuItem>
+                            <MenuItem> Hombre</MenuItem>
                         </Link>
                         <Link to={"/categoria/B"}>
-                            <MenuItem> Woman </MenuItem>
+                            <MenuItem> Mujer </MenuItem>
                         </Link>
                         <Link to={"/categoria/C"}>
-                            <MenuItem>Kids</MenuItem>
+                            <MenuItem>Niños</MenuItem>
                         </Link>
 
                     </MenuList>
