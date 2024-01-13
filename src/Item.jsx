@@ -1,8 +1,8 @@
 import React from 'react'
-import { Card, Text, Stack, Divider, ButtonGroup, Button, CardBody, Heading, CardFooter } from '@chakra-ui/react'
+import { Link, Card, Text, Stack, Divider, ButtonGroup, Button, CardBody, Heading, CardFooter } from '@chakra-ui/react'
 
 
-const Item = ({ titulo, descripcion, precio }) => {
+const Item = ({ titulo, id }) => {
     return (
         <Card maxW='sm'>
             <CardBody>
@@ -15,7 +15,11 @@ const Item = ({ titulo, descripcion, precio }) => {
             <Divider />
             <CardFooter>
                 <ButtonGroup spacing='2'>
-                    <Button> Ver Detalle </Button>
+                    <Button>
+                        <Link to={`/producto/${id}`}>
+                            Ver Detalle
+                        </Link>
+                    </Button>
                 </ButtonGroup>
             </CardFooter>
         </Card>

@@ -8,9 +8,13 @@ const ItemListContainer = () => {
   console.log(categoriaId)
 
   const productos = [
-    { id: 1, titulo: "Camisetas normales", description: "100% Algodón", precio: 890, categoria: "A" },
-    { id: 2, titulo: "Camisetas raras", description: "100% Algodón con estampas", precio: 1340, categoria: "B" },
-    { id: 3, titulo: "Juguetes", description: "Figuras coleccionables", precio: 550, categoria: "C" }
+    { id: 1, titulo: "Camisetas normales hombre", description: "100% Algodón", precio: 890, categoria: "A" },
+    { id: 2, titulo: "Camisetas especiales hombre", description: "100% Algodón con estampas", precio: 1340, categoria: "A" },
+    { id: 3, titulo: "Calzado hombre", description: "100% Algodón", precio: 890, categoria: "A" },
+    { id: 4, titulo: "Camisetas normales mujer", description: "100% Algodón con estampas", precio: 1340, categoria: "B" },
+    { id: 5, titulo: "Camisetas especiales mujer", description: "100% Algodón", precio: 890, categoria: "B" },
+    { id: 6, titulo: "Calzado mujer", description: "100% Algodón con estampas", precio: 1340, categoria: "B" },
+    { id: 7, titulo: "Juguetes", description: "Figuras coleccionables", precio: 550, categoria: "C" }
   ]
 
   const verProductos = new Promise((resolve, reject) => {
@@ -40,7 +44,10 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <ItemList productos={productosFiltrados} />
+      {
+        categoriaId ? <ItemList productos={productosFiltrados} /> : <ItemList productos={productos} />
+
+      }
     </div>
 
   )
