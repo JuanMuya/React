@@ -22,13 +22,13 @@ const Navbar = () => {
                     </MenuButton>
 
                     <MenuList>
-                        <Link to={"/categoria/A"}>
+                        <Link to={'/categoria/A'}>
                             <MenuItem> Hombre</MenuItem>
                         </Link>
-                        <Link to={"/categoria/B"}>
+                        <Link to={'/categoria/B'}>
                             <MenuItem> Mujer </MenuItem>
                         </Link>
-                        <Link to={"/categoria/C"}>
+                        <Link to={'/categoria/C'}>
                             <MenuItem>Niños</MenuItem>
                         </Link>
 
@@ -56,11 +56,6 @@ const Navbar = () => {
                     </Box>
                 </Link>
             </Flex>
-
-
-
-
-
         </div>
     )
 }

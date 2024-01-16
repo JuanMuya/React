@@ -16,18 +16,18 @@ const ItemDetailContainer = () => {
         { id: 7, titulo: "Juguetes", description: "Figuras coleccionables", precio: 550, categoria: "C" }
     ]
 
-    const verProducos = new Promise((resolve, reject) => {
+    const verProductos = new Promise((resolve, reject) => {
 
         if (productos.length > 0) {
             setTimeout(() => {
-                resolve(producos)
+                resolve(productos)
             }, 550)
         } else {
             reject("No se obtuvo resultado")
         }
     })
 
-    verProducos
+    verProductos
         .then((resultado) => {
             console.log(resultado)
         })
@@ -35,15 +35,12 @@ const ItemDetailContainer = () => {
             console.log(error)
         })
 
-    const productoFiltrado = productos.find((producto) => producto.id == id)
-
-
-
+    const productosFiltrados = productos.find((producto) => producto.id == id)
     return (
         <div>
 
             <ItemDetail
-                producto={productoFiltrado}
+                producto={productosFiltrados}
 
             />
 

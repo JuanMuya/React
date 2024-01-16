@@ -6,12 +6,7 @@ import { useParams } from 'react-router-dom'
 
 const ItemDetail = ({ producto }) => {
 
-    const { id } = useParams()
-
-
-
-
-    return (
+ return (
         <Card maxW='sm'>
             <CardBody>
 
