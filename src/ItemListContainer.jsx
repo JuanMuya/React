@@ -6,7 +6,6 @@ const ItemListContainer = () => {
 
   const { categoriaId } = useParams()
   
-
   const productos = [
     { id: 1, titulo: "Camisetas normales hombre", description: "100% Algodón", precio: 890, categoria: "A" },
     { id: 2, titulo: "Camisetas especiales hombre", description: "100% Algodón con estampas", precio: 1340, categoria: "A" },

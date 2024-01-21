@@ -10,7 +10,7 @@ import About from "./components/About"
 import ContactUs from "./components/ContactUs"
 
 import Cart from "./components/Cart"
-
+import Form from "./components/Form"
 
 
 
@@ -36,6 +36,9 @@ const App = () => {
 
 
       </Routes>
+
+
+      <Form/>
 
 
 
