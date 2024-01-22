@@ -1,20 +1,20 @@
 import { createContext, useState } from "react";
 
-
 export const CartContext = createContext(null)
+export const ShoppingCartProvider = ({ children }) => {
 
-export const ShoppingCartProvider = ({chilldren}) => {
+    const [cart, setCart] = useState([])
 
-const comision = "Palabra"
+    const comision = "Palabra"
 
 
+    return (
 
-return(
-    <CartContext.Provider value={{comision}}>
-        {chilldren}
-    </CartContext.Provider>
-)
+        <CartContext.Provider value={{ comision, cart, setCart }}>
+            {children}
+        </CartContext.Provider>
 
+    )
 }
 
 export default ShoppingCartProvider

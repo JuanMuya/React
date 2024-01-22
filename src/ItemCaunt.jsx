@@ -31,7 +31,7 @@ const ItemCaunt = () => {
                 +
             </Button>
             <Button onClick={mostrarMensaje}>
-                {contador}
+                Añadir al carrito {contador}
             </Button>
 
             <Button colorScheme='teal' size='xs' onClick={restar}>

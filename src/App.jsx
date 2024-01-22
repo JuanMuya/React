@@ -12,6 +12,10 @@ import ContactUs from "./components/ContactUs"
 import Cart from "./components/Cart"
 import Form from "./components/Form"
 
+import ShoppingCartContext from "./context/ShoppingCartContext"
+import ComponenteSub from "./components/ComponenteSub"
+
+
 
 
 
@@ -36,11 +40,12 @@ const App = () => {
 
 
       </Routes>
+      <Form />
 
-
-      <Form/>
-
-
+      <ShoppingCartContext>
+        <ComponenteSub />
+        <Cart />
+      </ShoppingCartContext>
 
     </BrowserRouter>
   )
