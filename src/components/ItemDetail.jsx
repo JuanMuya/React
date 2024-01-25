@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Card, Text, Stack, Divider, ButtonGroup, Button, CardBody, Heading, CardFooter } from '@chakra-ui/react'
 import ItemCaunt from '../ItemCaunt'
 import { useParams } from 'react-router-dom'
+import { CartContext } from '../context/ShoppingCartContext'
+
 
 
 const ItemDetail = ({ producto }) => {
 
- return (
+    const { addCart, cart } = useContext(CartContext)
+
+    return (
         <Card maxW='sm'>
             <CardBody>
 

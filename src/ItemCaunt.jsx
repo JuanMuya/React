@@ -23,8 +23,6 @@ const ItemCaunt = () => {
     }
 
 
-
-
     return (
         <div>
             <Button colorScheme='teal' size='xs' onClick={sumar}>

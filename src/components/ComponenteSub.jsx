@@ -5,6 +5,7 @@ import { CartContext } from '../context/ShoppingCartContext'
 const ComponenteSub = () => {
 
     const { comision, cart, setCart } = useContext(CartContext)
+   
     //  console.log(cart)
 
 
@@ -12,8 +13,7 @@ const ComponenteSub = () => {
 
     return (
         <>
-            <h1>{cart} </h1>
-            <p>{comision} </p>
+
 
             <button onClick={() => setCart("Nuevo Valor")} >Cambiar Valor </button>
 

@@ -60,7 +60,7 @@ const App = () => {
 
 
   //1 Renderizado condicional basado en una expresion
-  // const isVisible = true
+  const isVisible = true
 
   //2 Renderizado condicional bsado en operador ternario
   // const logueado = true
@@ -78,7 +78,7 @@ const App = () => {
 
   return (
     <>
-      {/*  //1  {isVisible && <ComponenteVisible />}    */}
+         {isVisible && <Cart />}
 
       {/*  //2 {logueado ? <UsuarioLogueado /> : <UsuarioNoLogueado />}  */}
 
@@ -92,7 +92,7 @@ const App = () => {
 
 
 
-    {/*   <Loader />   */}
+      {/*   <Loader />   */}
 
 
       <BrowserRouter>

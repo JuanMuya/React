@@ -50,7 +50,7 @@ const Navbar = () => {
                 </Link>
 
                 <Spacer />
-                <Link to={"/cart"}>
+                <Link className='seeCarrito' to={"/cart"}>
                     <Box p='4' bg='green.500'>
                         <CartWidget />
                     </Box>
