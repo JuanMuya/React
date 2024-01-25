@@ -21,6 +21,7 @@ import UsuarioLogueado from "./components/UsuarioLogueado"
 import UsuarioNoLogueado from "./components/UsuarioNoLogueado"
 import CartWidget from "./CartWidget"
 import Loader from "./components/Loader"
+import Collection from "./components/Collection"
 
 
 
@@ -78,7 +79,7 @@ const App = () => {
 
   return (
     <>
-         {isVisible && <Cart />}
+      {isVisible && <Cart />}
 
       {/*  //2 {logueado ? <UsuarioLogueado /> : <UsuarioNoLogueado />}  */}
 
@@ -111,6 +112,7 @@ const App = () => {
 
         </Routes>
         <Form />
+        <Collection />
 
         <ShoppingCartContext>
           <ComponenteSub />
