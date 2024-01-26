@@ -6,7 +6,7 @@ const ComponenteSub = () => {
 
     const { comision, cart, setCart } = useContext(CartContext)
    
-    //  console.log(cart)
+   
 
 
 
