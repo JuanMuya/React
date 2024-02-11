@@ -11,7 +11,7 @@ const ItemList = ({ productos }) => {
             <Item
               key={p.id}
               titulo={p.titulo}
-              descripcion={p.descripcion}
+              descripcion={p.description}
               precio={p.precio}
               id={p.id}
 

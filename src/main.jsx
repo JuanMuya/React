@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import ShoppingCartProvider from './context/ShoppingCartContext.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
+
 
 
 // Import the functions you need from the SDKs you need
@@ -26,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   
   <ChakraProvider>
     
-    <App />
+    <ShoppingCartProvider><App /></ShoppingCartProvider>
 
   </ChakraProvider>
 

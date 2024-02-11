@@ -1,28 +1,49 @@
-import { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from 'react';
 
 
 
-export const CartContext = createContext(false)
+export const CartContext = createContext()
 export const ShoppingCartProvider = ({ children }) => {
 
-    const [cart, setCart] = useState([])
+    const [cartItems, setCartItems] = useState([])
 
-   {/* const addCart = (producto, contador) => {
-        const addItem = { ...producto, contador }
-
-        const cartNew = [...cart]
-
-        const cartContenido = cart.find((producto) => producto.id === addItem)
-        if (cartContenido) {
-            cartContenido.contador += contador
-        } else {
-            cartNew.push(addItem)
+    
+    const addToCart = (producto,contador) => {
+        for(let i=0;i<contador;i++){
+            setCartItems((prevItems)=>[ ...prevItems,producto])
         }
-        setCart([...cart, addItem])
+        
     }
+    const removeFromCart = (itemIndex) => {
+        setCartItems((prevItems) =>
+          prevItems.filter((_, index) => index !== itemIndex)
+        );
+      };
+    
+      const clearCart = () => {
+        setCartItems([]);
+      };
+    
+      // Step 3: Provide the context values
+      const contextValues = {
+        cartItems: cartItems || [],
+        addToCart,
+        removeFromCart,
+        clearCart,
+      };
+    
+      return <CartContext.Provider value={contextValues}>{children}</CartContext.Provider>;
+    };
+    // Step 4: Create a Hook to use the Context
+    export const useCart = () => {
+    const context = useContext(CartContext);
+    if (!context) {
+      throw new Error('useCart must be used within a CartProvider');
+    }
+    return context;
+  };
 
-
-    const [contador, setContador] = useState(0)
+    /*const [contador, setContador] = useState(0)
 
 
     const mostrarMensaje = () => {
@@ -44,10 +65,10 @@ export const ShoppingCartProvider = ({ children }) => {
         return cart.reduce((acc, producto) => acc + producto.contador, 0)
     }
 
-*/}
+
 
     const comision = "Palabra"
-
+    
 
     return (
 
@@ -58,6 +79,6 @@ export const ShoppingCartProvider = ({ children }) => {
 
 
     )
-}
+*/
 
 export default ShoppingCartProvider

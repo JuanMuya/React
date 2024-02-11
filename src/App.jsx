@@ -11,17 +11,8 @@ import About from "./components/About"
 import ContactUs from "./components/ContactUs"
 
 import Cart from "./components/Cart"
-import Form from "./components/Form"
-
-import ShoppingCartContext from "./context/ShoppingCartContext"
-import ComponenteSub from "./components/ComponenteSub"
-
-import ComponenteVisible from "./components/ComponenteVisible"
-import UsuarioLogueado from "./components/UsuarioLogueado"
-import UsuarioNoLogueado from "./components/UsuarioNoLogueado"
-import CartWidget from "./CartWidget"
-import Loader from "./components/Loader"
-import Collection from "./components/Collection"
+import { ShoppingCartProvider } from "./context/ShoppingCartContext"
+import {Collection} from "./components/Collection"
 
 
 
@@ -79,7 +70,8 @@ const App = () => {
 
   return (
     <>
-      {isVisible && <Cart />}
+    <ShoppingCartProvider>
+      {isVisible /*&& <Cart />*/}
 
       {/*  //2 {logueado ? <UsuarioLogueado /> : <UsuarioNoLogueado />}  */}
 
@@ -102,8 +94,8 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/' element={<ItemListContainer />} />
-          <Route exact path='/categoria/:categoriaId' element={<ItemListContainer />} />
+          <Route path='/' element={<Collection />} />
+          <Route exact path='/categoria/:categoriaId' element={<Collection />} />
           <Route exact path='/producto/:id' element={<ItemDetailContainer />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/contact' element={<ContactUs />} />
@@ -111,16 +103,12 @@ const App = () => {
 
 
         </Routes>
-        <Form />
-        <Collection />
+        
 
-        <ShoppingCartContext>
-          <ComponenteSub />
-          <Cart />
-        </ShoppingCartContext>
+        
 
       </BrowserRouter>
-
+      </ShoppingCartProvider>
     </>
   )
 

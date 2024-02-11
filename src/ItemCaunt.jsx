@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import { Button } from '@chakra-ui/react'
+import { CartContext } from './context/ShoppingCartContext'
+import React, { useContext } from 'react'
+import { useCart } from './context/ShoppingCartContext'
 
-const ItemCaunt = () => {
+const ItemCaunt = ({ producto }) => {
 
-
+    //const { addCart, cart } = useContext(CartContext)
+    const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
     const [contador, setContador] = useState(0)
 
 
     const mostrarMensaje = () => {
+        addToCart(producto,contador);
         alert(`Agregado al carrito ${contador} unidades `)
     }
     const sumar = () => {
