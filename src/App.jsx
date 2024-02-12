@@ -1,10 +1,10 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Navbar from "./Navbar"
+import Navbar from "./components/NavBar"
 
 
-import ItemListContainer from './ItemListContainer'
+import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from "./components/ItemDetailContainer"
 
 import About from "./components/About"

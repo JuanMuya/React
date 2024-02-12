@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Card, Text, Stack, Divider, ButtonGroup, Button, CardBody, Heading, CardFooter } from '@chakra-ui/react'
-import ItemCaunt from '../ItemCaunt'
+import ItemCaunt from './ItemCaunt'
 
 
 

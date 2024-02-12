@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Button } from '@chakra-ui/react'
-import { CartContext } from './context/ShoppingCartContext'
+import { CartContext } from '../context/ShoppingCartContext'
 import React, { useContext } from 'react'
-import { useCart } from './context/ShoppingCartContext'
+import { useCart } from '../context/ShoppingCartContext'
 
 const ItemCaunt = ({ producto }) => {
 

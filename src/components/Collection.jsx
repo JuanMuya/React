@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { collection, getDocs, getFirestore, } from "firebase/firestore"
 import { useParams } from 'react-router-dom'
-import ItemList from '../ItemList'
+import ItemList from './ItemList'
 
 export const Collection = () => {
   const { categoriaId } = useParams()
@@ -22,26 +22,6 @@ export const Collection = () => {
 
 
   }, [])
-
-  /*const verProductos = new Promise((resolve, reject) => {
-
-    if (productos.length > 0) {
-      setTimeout(() => {
-        resolve(productos)
-      }, 10000)
-    } else {
-      reject("No se obtuvo resultado")
-    }
-  })*/
-
-  /*verProductos
-    .then((resultado) => {
-      //  console.log(resultado)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
-*/
 
   let productosFiltrados = productos.filter((producto) => producto.categoria == categoriaId)
 
